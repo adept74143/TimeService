@@ -1,0 +1,29 @@
+name: Publish 🚀
+
+on:
+   workflow_dispatch:
+   push:
+      branches:
+         - main
+
+jobs:
+   publish:
+   runs_on: ubuntu-latest
+
+   steps:
+         uses: actions/adept74143
+
+         name: setup .net
+         uses: actions/setup-dotnet@v3
+         with:
+             dotnet-version: '11.0.x'
+
+        name: Restore
+        run: dotnet restore ./TimeService.sln
+
+        name: Build
+        run: dotnet build ./TimeService.sln --configuration Release -no-restore 
+
+        name: Publish
+        run: dotnet publish ./TimeService.sln --configuration Release -no-build 
+        
