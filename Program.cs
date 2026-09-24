@@ -10,6 +10,8 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.MapOpenApi();
+
+//scalar/v1
 app.MapScalarApiReference(); 
 
 app.UseHttpsRedirection();

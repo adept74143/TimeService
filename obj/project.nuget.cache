@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "qZrFXo1nSfQ=",
+  "success": true,
+  "projectFilePath": "G:\\study\\SalesWithMe\\TimeService\\TimeService\\TimeService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\11.0.0-preview.1.26104.118\\microsoft.aspnetcore.openapi.11.0.0-preview.1.26104.118.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\scalar.aspnetcore\\2.17.8\\scalar.aspnetcore.2.17.8.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "G:\\study\\SalesWithMe\\TimeService\\TimeService\\TimeService.csproj",
+      "warningLevel": 1,
+      "filePath": "G:\\study\\SalesWithMe\\TimeService\\TimeService\\TimeService.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net11.0"
+      ]
+    }
+  ]
+}
