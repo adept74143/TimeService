@@ -21,7 +21,7 @@ jobs:
           dotnet-version: '11.0.x'
 
       - name: Restore
-        run: dotnet restore ./TimeService.sln
+        run: dotnet restore ./TimeService/TimeService.sln
 
       - name: Build
         run: dotnet build ./TimeService.sln --configuration Release --no-restore
