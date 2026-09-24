@@ -30,7 +30,7 @@ jobs:
         run: dotnet publish $(find . -name "*.sln" -print -quit) --configuration Release --no-build --output './publish'
 
       - name: Deployment
-        uses: actions/webapps-deploy@v4
+        uses: azure/webapps-deploy@v3
         with:
            app-name: 'time-service'
            publish-profile: ${{ secrets.AZUR_PUBLISH_PROFILE }}
