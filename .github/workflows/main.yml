@@ -27,11 +27,11 @@ jobs:
         run: dotnet build $(find . -name "*.sln" -print -quit) --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish $(find . -name "*.sln" -print -quit) --configuration Release --no-build --output './publish'
+        run: dotnet publish $(find . -name "*.sln" -print -quit) --configuration Release --no-build --output ./publish
 
       - name: Deployment
         uses: azure/webapps-deploy@v3
         with:
            app-name: 'time-service'
            publish-profile: ${{ secrets.AZUR_PUBLISH_PROFILE }}
-           package: './publish'
+           package: ./publish
