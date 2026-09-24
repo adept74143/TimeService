@@ -21,10 +21,10 @@ jobs:
           dotnet-version: '11.0.x'
 
       - name: Restore
-        run: dotnet restore ./TimeService/TimeService.sln
+        run: dotnet restore $(find . -name "*.sln" -print -quit)
 
       - name: Build
-        run: dotnet build ./TimeService.sln --configuration Release --no-restore
+        run: dotnet build $(find . -name "*.sln" -print -quit) --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./TimeService.sln --configuration Release --no-build
+        run: dotnet publish $(find . -name "*.sln" -print -quit) --configuration Release --no-build
